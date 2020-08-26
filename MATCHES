@@ -1,0 +1,47 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+    int n , a ,b ,c ,sum  ;
+    string s;
+    cin >> n;
+    for(int p =0 ; p<n ; p++)
+    {   int c;
+        sum = 0;
+        cin >> a >> b;
+        c = a+b;
+        string s =  to_string(c);
+        for(int i =0 ; i < s.length() ; i++)
+        {
+            if(s[i] == '0' || s[i] == '6' || s[i] == '9')
+            {
+                sum = sum +6 ;
+            }
+            else if(s[i] == '2' || s[i] == '3' || s[i] == '5')
+            {
+                sum = sum +5;
+            }
+            else if (s[i] == '1')
+            {
+                sum = sum + 2;
+            }
+            else if (s[i] == '4')
+            {
+                sum = sum +4;
+            }
+            else if (s[i] == '7')
+            {
+                sum = sum +3 ;
+            }
+            else if (s[i] == '8')
+            {
+                sum = sum + 7;
+            }
+         
+        }
+        cout << sum << "\n";
+    }
+
+return 0;
+}
