@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    string a;
+    string year[5] = {"2015" , "2010" , "2016" , "2017" , "2019" };
+    cin >> n ;
+    for(int p =0 ; p < n ; p++)
+    {
+     cin >> a ;
+
+     for(int i = 0 ; i < 5 ; i++)
+     {
+         if(a == year[i] || a == year[i+1] || a == year[i+2] || a == year[i+3] || a == year[i+4] )
+         {
+             cout << "HOSTED" <<"\n";
+             break;
+         }
+
+
+
+      else
+     {
+         cout << "NOT" <<" " << "HOSTED" <<"\n";
+         break;
+     }
+
+
+    }
+}
+return 0;
+}
